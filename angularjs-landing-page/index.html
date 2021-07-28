@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="" name="description">
+	<title>Landing Page</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/app.css" rel="stylesheet">
+	<link href="images/favicon.png" rel="shortcut icon">
+	<script src="js/pace.js">
+	</script>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type=
+	'text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js">
+	</script>
+</head>
+<body>
+	<div class="preloader"></div>
+	<div id="main"></div>
+	<div class="container">
+		<section class="row breath">
+			<div class="col-md-12 footerlinks">
+				<p translate="footer"></p>
+			</div>
+		</section>
+	</div>
+	<script src="js/jquery.js">
+	</script> 
+	<script src="js/bootstrap.js">
+	</script> 
+	<script src="js/easing.js">
+	</script> 
+	<script src="js/nicescroll.js">
+	</script> 
+	<script>
+	$(function() {
+	   $('.scrollto, .gototop').bind('click',function(event){
+	        var $anchor = $(this);
+	        $('html, body').stop().animate({
+	        scrollTop: $($anchor.attr('href')).offset().top
+	         }, 1500,'easeInOutExpo');
+	    event.preventDefault();
+	     });
+	 });
+	       
+
+	</script> <!-- angular scripts -->
+	<script src="lib/angular/angular-route.min.js">
+	</script> 
+	<script src="lib/angular/angular-resource.min.js">
+	</script> <!-- Third party libraries -->
+	<script src="lib/angular-translate/angular-translate.min.js">
+	</script> <!-- angular app declaration-->
+	<script src="partials/app.js">
+	</script> <!-- angular configuration files -->
+	<script src="conf/translations.js">
+	</script> <!-- angular partials controllers -->
+	<script src="partials/index/indexController.js">
+	</script> 
+	<script src="partials/request-list/requestController.js">
+	</script>
+</body>
+</html>
